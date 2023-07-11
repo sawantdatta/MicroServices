@@ -52,11 +52,11 @@ Steps to execute Application : -
 
 **a) WebClient:-**
 
-  1.Now add some dummy data into the employee table as 
+  1. Now add some dummy data into the employee table as 
     id:11, email_id:a, first_name:a, last_name:a,department_id:11 ( make sure that this depertment id not present in the department table)
-  2.Now restart employee service
+  2. Now restart employee service
    Open postman and apply Get method url as http://127.0.0.1:8081/api/v1/employees/getEmployeeDepartment/11
-   Will see below result :
+  3. Will see below result :
    {
     "departmentDto": {
         "id": 1,
@@ -74,16 +74,18 @@ Here CircuitBreaker fallbackMethod method get invoke with default department ser
 
 
 **b) ApiClient:-**
-To use ApiClient some correction is required here
- 1.comment out WebClient code from Main Class of Employee Service and also EmployeeController file from Autowired and getEmployeeDepartmentById method.
- 2.un comment out code from the getEmployeeDepartmentById method for the ApiClient
- 3.Now restart Employee Service and Open postman and apply Get method url as 
-  http://127.0.0.1:8081/api/v1/employees/getEmployeeDepartment/11 will see above result.
+  To use ApiClient some correction is required here
+  1. comment out WebClient code from Main Class of Employee Service and also EmployeeController file from Autowired and 
+   getEmployeeDepartmentById method.
+  2. un comment out code from the getEmployeeDepartmentById method for the ApiClient
+  3. Now restart Employee Service and Open postman and apply Get method url as 
+   http://127.0.0.1:8081/api/v1/employees/getEmployeeDepartment/11 will see above result
 
 **c) RestTemplate:**
 
-To use RestTemplate some correction is required here
- 1.comment out WebClient code from Main Class of Employee Service and also EmployeeController file from Autowired ( ApiClient also ) and getEmployeeDepartmentById method.
- 2.un comment out code from the getEmployeeDepartmentById method for the RestTemplate and make DepartmentDto mapping changes accordingly
- 3.Now restart Employee Service and Open postman and apply Get method url as 
-  http://127.0.0.1:8081/api/v1/employees/getEmployeeDepartment/11 will see above result
+  To use RestTemplate some correction is required here
+  1. comment out WebClient code from Main Class of Employee Service and also EmployeeController file from Autowired ( ApiClient also ) 
+    and getEmployeeDepartmentById method.
+  2. un comment out code from the getEmployeeDepartmentById method for the RestTemplate and make DepartmentDto mapping changes accordingly
+  3. Now restart Employee Service and Open postman and apply Get method url as 
+   http://127.0.0.1:8081/api/v1/employees/getEmployeeDepartment/11 will see above result
