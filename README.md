@@ -75,15 +75,15 @@ Here CircuitBreaker fallbackMethod method get invoke with default department ser
 
 **b) ApiClient:-**
 To use ApiClient some correction is required here
- -comment out WebClient code from Main Class of Employee Service and also EmployeeController file from Autowired and getEmployeeDepartmentById method.
- -un comment out code from the getEmployeeDepartmentById method for the ApiClient
- -Now restart Employee Service and Open postman and apply Get method url as 
+ 1.comment out WebClient code from Main Class of Employee Service and also EmployeeController file from Autowired and getEmployeeDepartmentById method.
+ 2.un comment out code from the getEmployeeDepartmentById method for the ApiClient
+ 3.Now restart Employee Service and Open postman and apply Get method url as 
   http://127.0.0.1:8081/api/v1/employees/getEmployeeDepartment/11 will see above result.
 
 **c) RestTemplate:**
 
 To use RestTemplate some correction is required here
- -comment out WebClient code from Main Class of Employee Service and also EmployeeController file from Autowired ( ApiClient also ) and getEmployeeDepartmentById method.
- -un comment out code from the getEmployeeDepartmentById method for the RestTemplate and make DepartmentDto mapping changes accordingly
- -Now restart Employee Service and Open postman and apply Get method url as 
+ 1.comment out WebClient code from Main Class of Employee Service and also EmployeeController file from Autowired ( ApiClient also ) and getEmployeeDepartmentById method.
+ 2.un comment out code from the getEmployeeDepartmentById method for the RestTemplate and make DepartmentDto mapping changes accordingly
+ 3.Now restart Employee Service and Open postman and apply Get method url as 
   http://127.0.0.1:8081/api/v1/employees/getEmployeeDepartment/11 will see above result
