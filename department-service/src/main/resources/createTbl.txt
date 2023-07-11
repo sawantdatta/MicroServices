@@ -1,0 +1,8 @@
+-- Table: department
+
+CREATE TABLE IF NOT EXISTS department
+(
+    id integer NOT NULL,
+    department_name character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT department_pkey PRIMARY KEY (id)
+)
