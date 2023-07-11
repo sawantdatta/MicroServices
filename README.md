@@ -46,5 +46,10 @@ Steps to execute Application : -
   10) Start Spring Boot Application
   11) Open postman and apply Get method url as http://127.0.0.1:8082/api/v2/departments/getAllDepartments this will load all the employees from table.
 
-Communication between two microservices:-
+Communication between two microservices using WebClient:-
+
+1.Now add some dummy data into the employee table as 
+ EmpId:
+ 
+    
   
